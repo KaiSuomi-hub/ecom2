@@ -1,0 +1,15 @@
+.collection-preview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  font-family: "Open Sans Condensed", sans-serif;
+  padding: 20px 60px;
+}
+.collection-preview .title {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+.collection-preview .preview {
+  display: flex;
+  justify-content: space-around;
+}/*# sourceMappingURL=collection-preview.styles.css.map */

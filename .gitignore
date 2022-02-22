@@ -5,7 +5,8 @@ desktop.ini
 #secret shit
 secret.php
 secret*.*
-
+.env
+*.env
 #
 #GIT
 .git/

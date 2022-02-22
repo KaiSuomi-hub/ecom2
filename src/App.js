@@ -7,24 +7,20 @@ import {
   useParams,
 } from 'react-router-dom';
 
+import ShopPage from './page/shop/shop.component';
+import Header from './components/header/header.component'
 
-const HatsPage = (props) => {
-  console.log(props);
-  return (
-
-    <h1>Hats!</h1>
-
-    )
-};
 
 
 
 function  App() {
     return (
       <div>
+        <Header/>
+          <div>
           <Routes>
           <Route path="/" element={<HomePage/>} ></Route>
-          <Route path="/hats" element={<HatsPage />} ></Route>
+          <Route path="/shop" element={<ShopPage/>} ></Route>
           <Route
           path="*"
           element={
@@ -34,7 +30,7 @@ function  App() {
             }
             />
           </Routes>
-
+          </div>
       </div>
     );
 }
