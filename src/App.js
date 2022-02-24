@@ -4,7 +4,7 @@ import HomePage from './page/homepage/homapage.component';
 import {
   Route,
   Routes,
-  useParams,
+  // useParams,
 } from 'react-router-dom';
 
 import ShopPage from './page/shop/shop.component';
@@ -17,7 +17,6 @@ function  App() {
     return (
       <div>
         <Header/>
-          <div>
           <Routes>
           <Route path="/" element={<HomePage/>} ></Route>
           <Route path="/shop" element={<ShopPage/>} ></Route>
@@ -30,7 +29,6 @@ function  App() {
             }
             />
           </Routes>
-          </div>
       </div>
     );
 }

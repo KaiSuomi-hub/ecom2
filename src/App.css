@@ -1,4 +1,12 @@
 body {
   font-family: "Open Sans Condensed", sans-serif;
   padding: 20px 80px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:visited {
+  color: #666;
 }/*# sourceMappingURL=App.css.map */

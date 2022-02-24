@@ -1,15 +1,26 @@
 .header
 	height: 70px
-	width: 100%
+	width: 95%
 	display: flex
 	justify-content: space-between
 	margin-bottom: 25px
 	font-family: 'Open Sans Condensed', sans-serif
+	font-size: 2rem
+	margin-left: 2%
 
 	.logo-container
 		height: 100%
 		width: 70px
 		padding: 25px
+		background-image: url( './crown.svg' )
+		background-position: center
+		background-size: cover
+		transform: scale(0.5)
+
+		&:hover
+			transform: scale(0.8)
+			transition: transform 1s
+
 
 	.options
 		width: 50%
@@ -17,6 +28,10 @@
 		display: flex
 		align-items: center
 		justify-content: flex-end
+		top: 0px
+		position: relative
+		top: 50%
+
 
 	.option
 		padding: 10px 15px
