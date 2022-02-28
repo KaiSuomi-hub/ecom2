@@ -1,14 +1,14 @@
 {
-  "main.css": "http://rusinapul.la/shop/static/css/main.c9d9935a.chunk.css",
-  "main.js": "http://rusinapul.la/shop/static/js/main.785357c1.chunk.js",
-  "main.js.map": "http://rusinapul.la/shop/static/js/main.785357c1.chunk.js.map",
-  "static/js/1.297791e2.chunk.js": "http://rusinapul.la/shop/static/js/1.297791e2.chunk.js",
-  "static/js/1.297791e2.chunk.js.map": "http://rusinapul.la/shop/static/js/1.297791e2.chunk.js.map",
-  "runtime~main.js": "http://rusinapul.la/shop/static/js/runtime~main.7581b2cf.js",
-  "runtime~main.js.map": "http://rusinapul.la/shop/static/js/runtime~main.7581b2cf.js.map",
-  "static/media/header.styles.css": "http://rusinapul.la/shop/static/media/crown.ed28accb.svg",
-  "static/css/main.c9d9935a.chunk.css.map": "http://rusinapul.la/shop/static/css/main.c9d9935a.chunk.css.map",
-  "index.html": "http://rusinapul.la/shop/index.html",
-  "precache-manifest.d2ad6f334ccb6bc1b65d839daa57b6f4.js": "http://rusinapul.la/shop/precache-manifest.d2ad6f334ccb6bc1b65d839daa57b6f4.js",
-  "service-worker.js": "http://rusinapul.la/shop/service-worker.js"
+  "main.css": "./static/css/main.375c82fc.chunk.css",
+  "main.js": "./static/js/main.ba8be3ff.chunk.js",
+  "main.js.map": "./static/js/main.ba8be3ff.chunk.js.map",
+  "static/js/1.94734c57.chunk.js": "./static/js/1.94734c57.chunk.js",
+  "static/js/1.94734c57.chunk.js.map": "./static/js/1.94734c57.chunk.js.map",
+  "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
+  "runtime~main.js.map": "./static/js/runtime~main.4a686d48.js.map",
+  "static/media/header.styles.css": "./static/media/crown.ed28accb.svg",
+  "static/css/main.375c82fc.chunk.css.map": "./static/css/main.375c82fc.chunk.css.map",
+  "index.html": "./index.html",
+  "precache-manifest.d88f8594e79d3fd779b1e142d4c14f97.js": "./precache-manifest.d88f8594e79d3fd779b1e142d4c14f97.js",
+  "service-worker.js": "./service-worker.js"
 }
