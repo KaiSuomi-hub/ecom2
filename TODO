@@ -3,4 +3,5 @@ Implement mysql connection:
   ☐ Create a database from provided json
   ☐ Create a db connecting component, use props
   ☐ Figure out do we hardcode the query ie dbFetcher(Jackets)?
-  
+
+use export PUBLIC_URL=http://example.com/subdir before running yarn run build
