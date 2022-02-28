@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "%20%20/KaiSuomi-hub/ecom2/precache-manifest.563627ab133da215f0bd125d99034966.js"
+  "/KaiSuomi-hub/ecom2/precache-manifest.9096024f4090041bc0d094d1c736a28e.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("%20%20/KaiSuomi-hub/ecom2/index.html", {
+workbox.routing.registerNavigationRoute("/KaiSuomi-hub/ecom2/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
