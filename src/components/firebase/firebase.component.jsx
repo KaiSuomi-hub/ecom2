@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './firebase.styles.css';
-
+import FormInput from '../form-input/form-input.component'
 
 class Firebase extends React.Component {
 	constructor(props) {
@@ -13,7 +13,7 @@ class Firebase extends React.Component {
 	}
 
 	handleSubmit = (event) => {
-		event.preventDefault(); //on submit we prevent the default actio and hijack the data
+		event.preventDefault(); //on submit we prevent the default action and hijack the data
 
 		this.setState({email: '', password: ''});
 }
@@ -27,21 +27,21 @@ class Firebase extends React.Component {
 				<h2>I already have an account</h2>
 				<span>Sign in with your email and password</span>
 				<form onSubmit={this.handleSubmit}>
-					<input
+					<FormInput
 						name="email"
 						type="email"
 						value={this.state.email}
-						onChange={this.handleChange}//here we divert to handleChange function which changes state
+						handleChange={this.handleChange}//here we divert to handleChange function which changes state
+						label="Email"
 						required />
-					<label>Email</label>
-					<input
+					<FormInput
 						name="password"
 						type="password"
 						value={this.state.password}
-						onChange={this.handleChange}//here we divert to handleChange function which changes state
+						handleChange={this.handleChange}//here we divert to handleChange function which changes state
+						label="Password"
 						required />
-					<label>Password</label>
-
+					<br/>
 					<input type="submit" value="Submit" />
 				</form>
 			</div>

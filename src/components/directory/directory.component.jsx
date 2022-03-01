@@ -2,6 +2,8 @@ import React from 'react';
 import './directory.styles.css';
 import Menuitem from '../menu-item/menu-item.component'
 
+// this is class component
+// state lives here
 class Directory extends React.Component {
 	constructor() {
 		super();
