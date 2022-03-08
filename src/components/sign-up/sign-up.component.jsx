@@ -1,9 +1,10 @@
 import React from 'react';
+import CustomButton from '../custom-button/custom-button.component'
 
-import './firebase.styles.css';
+import './sign-up.styles.css';
 import FormInput from '../form-input/form-input.component'
 
-class Firebase extends React.Component {
+class SignUp extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {	//here we set the fields states to empty
@@ -42,11 +43,13 @@ class Firebase extends React.Component {
 						label="Password"
 						required />
 					<br/>
-					<input type="submit" value="Submit" />
+					<CustomButton type="submit"> Sign in </CustomButton>
+					<CustomButton type="submit"> Sign in </CustomButton>
+
 				</form>
 			</div>
 		);
 	}
 }
 
-export default Firebase;
+export default SignUp;

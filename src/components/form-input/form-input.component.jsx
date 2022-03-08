@@ -1,5 +1,7 @@
 import React from 'react';
 import './form-input.styles.css'
+
+
 //Remember, this is functional component
 //meaning that state doesn't live in it
 const FormInput = ({ handleChange, label, ...otherProps }) => (
