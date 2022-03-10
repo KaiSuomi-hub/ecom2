@@ -1,10 +1,16 @@
-import firebase from 'firebase/app'
-// notice the /app suffix
+import firebase from 'firebase/compat/app'
+// notice the compat/app suffix
+// the tutorial uses an older firebase
 // cSpell:disable
-import 'firebase/firestore';
+import 'firebase/compat/firestore';
 //this is the database
-import 'firebase/auth';
+// notice the compat/app suffix
+// the tutorial uses an older firebase
+import 'firebase/compat/auth';
 //authentication
+// notice the compat/app suffix
+// the tutorial uses an older firebase
+
 // cSpell:enable
 
 
@@ -24,3 +30,17 @@ appId: "1:214534738942:web:c23f16f590543c27eae6af",
   // Initialize Firebase
 firebase.initializeApp(config);
 	// cSpell:enable
+
+//here we export out methods for other components to use
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({ prompt: 'select_account' });
+//when we use the google auth provider we trigger the google account select and login
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
+// here we specify google as the sign in provider. We have access to twitter and others
+//https://console.firebase.google.com/project/udemy-crwn-clthng/authentication/providers
+
+export default firebase;
+//this is for whole shebang

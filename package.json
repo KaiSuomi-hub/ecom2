@@ -2,6 +2,7 @@
   "name": "crwn-clothing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://udemy-crwn-clthng.web.app/",
   "start_url": ".",
   "dependencies": {
     "firebase": "^9.6.8",
@@ -17,7 +18,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "firebase deploy"
   },
   "browserslist": {
     "production": [
