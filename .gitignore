@@ -5,6 +5,9 @@ desktop.ini
 #secret shit
 secret.php
 secret*.*
+#this is for firebase authentication in react
+firebase.utils.js
+
 .env
 *.env
 #

@@ -6,7 +6,7 @@
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
-  background-color: black;
+  background-color: #4e4e4e;
   color: white;
   text-transform: uppercase;
   font-family: "Open Sans Condensed";
@@ -15,8 +15,8 @@
   cursor: pointer;
 }
 .custom-button:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 .custom-button.google-sign-in {
   background-color: #4285f4;
@@ -25,5 +25,5 @@
 }
 .custom-button.google-sign-in:hover {
   background-color: #357ae8;
-  color: black;
+  color: white;
 }/*# sourceMappingURL=custom-button.styles.css.map */
