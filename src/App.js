@@ -11,28 +11,57 @@ import ShopPage from './pages/shop/shop.component';
 import Header from './components/header/header.component'
 import SignIn from './pages/sign-in/sign-in.component'
 
+import { auth } from './firebase/firebase.utils';
 
 
-function  App() {
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {	//this is for Oauth
+      currentUser: null,
+    }
+  }
+
+  //*this is a lifecycle catch to keep an eye on the state of the login/oauth
+  //*we call auth from firebase onchange and set state of currentUser to user which we get
+  componentDidMount() {
+    auth.onAuthStateChanged(user => {
+      this.setState({ currentUser: user });
+      // console.log(user)
+    })
+
+  }
+  //* this is to stop memory leaks. We close the connection when component is not mounted
+  unSubscribeFromAuth = null;
+  componentWillUnmount() {
+    this.unSubscribeFromAuth();
+  }
+
+  render(){
     return (
       <div>
-        <Header/>
-          <Routes>
-          <Route path="/" element={<HomePage/>} ></Route>
-          <Route path="/shop" element={<ShopPage />} ></Route>
-          <Route path="/signin" element={<SignIn/>} ></Route>
+          {/* Here we pass along the login status state as a prop */}
+        <Header currentUser={this.state.currentUser} />
+        {/* //! this is how we dig stuff out from the oauth object */}
+
+            <Routes>
+            <Route path="/" element={<HomePage/>} ></Route>
+            <Route path="/shop" element={<ShopPage />} ></Route>
+            <Route path="/signin" element={<SignIn/>} ></Route>
 
           <Route
-          path="*"
-          element={
-            <main style={{ padding: "1rem" }}>
-              <p>There's nothing here!</p>
-            </main>
-            }
-            />
-          </Routes>
-      </div>
-    );
+            //* 404
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+              }
+              />
+        </Routes>
+        </div>
+      );}
 }
 
 export default App;

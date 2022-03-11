@@ -9,4 +9,8 @@ a {
 }
 a:visited {
   color: #666;
+}
+
+* {
+  box-sizing: border-box;
 }/*# sourceMappingURL=App.css.map */

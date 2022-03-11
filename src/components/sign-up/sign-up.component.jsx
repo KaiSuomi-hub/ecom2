@@ -45,10 +45,13 @@ class SignUp extends React.Component {
 						handleChange={this.handleChange}//here we divert to handleChange function which changes state
 						label="Password"
 						required />
-					<br/>
+					<br />
+					<div className="buttons">
 					<CustomButton type="submit"> Sign in </CustomButton>
-					<CustomButton className="google" onClick={signInWithGoogle}> Google SignIn </CustomButton>
-
+					<CustomButton onClick={signInWithGoogle}
+						isGoogleSignIn> Google SignIn </CustomButton>
+					{/* we pass prop isGoogleSignIn as a prop to custombutton */}
+					</div>
 				</form>
 			</div>
 		);
