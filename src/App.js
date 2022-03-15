@@ -11,7 +11,7 @@ import ShopPage from './pages/shop/shop.component';
 import Header from './components/header/header.component'
 import SignIn from './pages/sign-in/sign-in.component'
 
-import { auth } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 
 
@@ -24,14 +24,17 @@ class App extends React.Component {
   }
 
   //*this is a lifecycle catch to keep an eye on the state of the login/oauth
-  //*we call auth from firebase onchange and set state of currentUser to user which we get
+  //*we call auth from firebase onchange and set state of currentUser to user which we get from google
   componentDidMount() {
     auth.onAuthStateChanged(user => {
       this.setState({ currentUser: user });
-      // console.log(user)
+      console.log(user)
     })
-
+    this.unSubscribeFromAuth = auth.onAuthStateChanged(async user => {
+      createUserProfileDocument(user);
+    })
   }
+
   //* this is to stop memory leaks. We close the connection when component is not mounted
   unSubscribeFromAuth = null;
   componentWillUnmount() {
