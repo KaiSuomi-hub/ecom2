@@ -28,11 +28,37 @@ class App extends React.Component {
   componentDidMount() {
     auth.onAuthStateChanged(user => {
       this.setState({ currentUser: user });
-      console.log(user)
+      // console.log(user)
     })
-    this.unSubscribeFromAuth = auth.onAuthStateChanged(async user => {
-      createUserProfileDocument(user);
-    })
+    // *this stored the user in firebase
+    // this.unSubscribeFromAuth = auth.onAuthStateChanged(async user => {
+    //   createUserProfileDocument(user);
+    // })
+    //* this unsigns user
+    this.unSubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      //* if value of userAuth is not null then we take a look at a snapshot
+      //* snapshot is a current status object from the firebase
+      //* then we set state for the values of the snapshot
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot(snapShot => {
+          // console.log(snapShot);
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          }
+          );
+        });
+      }
+      //* Let's check state for currentUser.
+      console.log(this.state);
+      //* If user hasn't signed in we set currentUser state to null
+      this.setState({ currentUser: userAuth });
+    });
+
   }
 
   //* this is to stop memory leaks. We close the connection when component is not mounted
